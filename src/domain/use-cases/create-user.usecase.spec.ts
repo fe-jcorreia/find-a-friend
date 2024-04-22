@@ -16,6 +16,7 @@ describe("User use case - Unit test", () => {
     const { user } = await sut.exec({
       email: "johndoe@email.com",
       password: "a1234567",
+      name: "John Doe",
     });
 
     expect(user.id).toEqual(expect.any(String));
@@ -26,6 +27,7 @@ describe("User use case - Unit test", () => {
     await sut.exec({
       email: "johndoe@email.com",
       password: "a1234567",
+      name: "John Doe",
     });
 
     const isPasswordCorrect = await compare(

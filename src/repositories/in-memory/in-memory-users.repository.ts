@@ -10,6 +10,7 @@ export class InMemoryUsersRepository implements IUsersRepository {
       id: randomUUID(),
       email: data.email,
       password: data.password,
+      name: data.name,
       role: data.role ? data.role : Role.USER,
       created_at: new Date(),
       updated_at: new Date(),
